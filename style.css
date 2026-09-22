@@ -1,0 +1,207 @@
+/* -------------------------------
+   BASIC PAGE SETUP
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4efe6,
+            #e8ded0
+        );
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #342f2a;
+
+    padding: 24px;
+
+}
+
+
+/* -------------------------------
+   MESSAGE CARD
+-------------------------------- */
+
+.message-container {
+
+    width: 100%;
+    max-width: 520px;
+
+    background: #fffaf2;
+
+    padding: 48px 36px;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(50, 40, 30, 0.15);
+
+    text-align: center;
+
+}
+
+
+/* -------------------------------
+   MESSAGE NUMBER
+-------------------------------- */
+
+.message-number {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #8c7a68;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* -------------------------------
+   TITLE
+-------------------------------- */
+
+h1 {
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    font-weight: normal;
+
+    margin:
+        0
+        0
+        12px
+        0;
+
+}
+
+
+/* -------------------------------
+   DATE
+-------------------------------- */
+
+.date {
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    color: #86786a;
+
+}
+
+
+/* -------------------------------
+   DIVIDER
+-------------------------------- */
+
+.divider {
+
+    width: 50px;
+
+    height: 1px;
+
+    background: #b5a28f;
+
+    margin:
+        28px
+        auto;
+
+}
+
+
+/* -------------------------------
+   INTRO MESSAGE
+-------------------------------- */
+
+.intro {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 32px;
+
+}
+
+
+/* -------------------------------
+   AUDIO PLAYER
+-------------------------------- */
+
+audio {
+
+    width: 100%;
+
+    margin:
+        10px
+        0
+        36px
+        0;
+
+}
+
+
+/* -------------------------------
+   FOOTER
+-------------------------------- */
+
+.footer {
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #a39383;
+
+}
+
+
+/* -------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .message-container {
+
+        padding:
+            40px
+            24px;
+
+    }
+
+    h1 {
+
+        font-size: 29px;
+
+    }
+
+}
