@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Celebrating Forever</title>
+
+    <link
+        rel="stylesheet"
+        href="styles/styles.css"
+    >
+
+</head>
+
+
+<body class="message-page">
+
+
+    <!-- ==============================
+         MENU BUTTON
+    =============================== -->
+
+    <button
+        class="menu-button menu-button--dark"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navigationDrawer"
+    >
+
+        <span class="menu-icon" aria-hidden="true">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </span>
+
+        <span class="menu-label">
+            Menu
+        </span>
+
+    </button>
+
+
+    <!-- ==============================
+         NAVIGATION OVERLAY
+    =============================== -->
+
+    <div
+        class="navigation-overlay"
+        id="navigationOverlay"
+    ></div>
+
+
+    <!-- ==============================
+         NAVIGATION DRAWER
+    =============================== -->
+
+    <nav
+        class="navigation-drawer"
+        id="navigationDrawer"
+        aria-label="Main navigation"
+    >
+
+        <button
+            class="navigation-close"
+            id="closeMenuButton"
+            type="button"
+            aria-label="Close navigation menu"
+        >
+            ×
+        </button>
+
+
+        <p class="navigation-eyebrow">
+            Celebrating Forever
+        </p>
+
+
+        <a
+            class="navigation-link"
+            href="index.html"
+        >
+            Home
+        </a>
+
+
+        <a
+            class="navigation-link"
+            href="collection.html"
+        >
+            Messages I've Found
+        </a>
+
+
+        <a
+            class="navigation-link"
+            href="message.html"
+            data-development-only
+        >
+            Message Template
+        </a>
+
+    </nav>
+
+
+    <!--
+    ====================================================
+    DARK ACADEMIA ENVIRONMENT
+    ====================================================
+
+    This section fills the screen.
+
+    The illustrated objects and actual floral artwork will
+    be added later after you approve the assets.
+    -->
+
+    <main class="message-environment">
+
+
+        <!--
+        Temporary atmospheric shapes.
+        These will eventually be replaced or supplemented
+        by proper approved artwork.
+        -->
+
+        <div
+            class="academic-shape academic-shape--left"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="academic-shape academic-shape--right"
+            aria-hidden="true"
+        ></div>
+
+
+        <!--
+        Temporary floral positioning guides.
+        -->
+
+        <div
+            class="floral-haze floral-haze--top"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="floral-haze floral-haze--bottom"
+            aria-hidden="true"
+        ></div>
+
+
+        <!--
+        =================================================
+        STATIONERY MESSAGE CARD
+        =================================================
+        -->
+
+        <article class="message-card">
+
+
+            <p class="message-number">
+                Message 01
+            </p>
+
+
+            <h1 class="message-title">
+                Wake up message
+            </h1>
+
+
+            <p class="message-description">
+                I wanted my voice to be one of the first
+                things you heard today.
+            </p>
+
+
+            <div
+                class="message-divider"
+                aria-hidden="true"
+            ></div>
+
+
+            <!--
+            Standard HTML audio player FOR NOW.
+
+            We will consider replacing this with a custom
+            player after the main website is complete.
+            -->
+
+            <audio
+                class="message-audio"
+                controls
+                preload="metadata"
+            >
+
+                <source
+                    src="audio/test.m4a"
+                    type="audio/mp4"
+                >
+
+                Your browser does not support audio playback.
+
+            </audio>
+
+
+            <!--
+            The decorative earbuds will eventually occupy
+            this region.
+
+            For now this label marks their intended role.
+            -->
+
+            <div
+                class="earbud-placeholder"
+                aria-hidden="true"
+            >
+                decorative wired earbuds
+            </div>
+
+
+        </article>
+
+    </main>
+
+
+    <script src="scripts/site-config.js"></script>
+
+    <script src="scripts/shared.js"></script>
+
+</body>
+
+</html>

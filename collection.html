@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Celebrating Forever</title>
+
+    <link
+        rel="stylesheet"
+        href="styles/styles.css"
+    >
+
+</head>
+
+
+<body class="collection-page">
+
+
+    <!-- ==============================
+         MENU BUTTON
+    =============================== -->
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navigationDrawer"
+    >
+
+        <span class="menu-icon" aria-hidden="true">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </span>
+
+        <span class="menu-label">
+            Menu
+        </span>
+
+    </button>
+
+
+    <!-- ==============================
+         NAVIGATION
+    =============================== -->
+
+    <div
+        class="navigation-overlay"
+        id="navigationOverlay"
+    ></div>
+
+
+    <nav
+        class="navigation-drawer"
+        id="navigationDrawer"
+        aria-label="Main navigation"
+    >
+
+        <button
+            class="navigation-close"
+            id="closeMenuButton"
+            type="button"
+            aria-label="Close navigation menu"
+        >
+            ×
+        </button>
+
+
+        <p class="navigation-eyebrow">
+            Celebrating Forever
+        </p>
+
+
+        <a
+            class="navigation-link"
+            href="index.html"
+        >
+            Home
+        </a>
+
+
+        <a
+            class="navigation-link"
+            href="collection.html"
+        >
+            Messages I've Found
+        </a>
+
+
+        <a
+            class="navigation-link"
+            href="message.html"
+            data-development-only
+        >
+            Message Template
+        </a>
+
+    </nav>
+
+
+    <!-- ==============================
+         COLLECTION CONTENT
+    =============================== -->
+
+    <main class="collection-layout">
+
+
+        <section class="collection-introduction">
+
+
+            <p class="collection-eyebrow">
+                A little archive
+            </p>
+
+
+            <h1>
+                Messages I've Found
+            </h1>
+
+
+            <p>
+                Every note you've discovered will have a
+                place here.
+            </p>
+
+
+            <div
+                class="collection-divider"
+                aria-hidden="true"
+            ></div>
+
+
+            <!--
+            This is temporary.
+
+            Checkpoint 3 will replace this with the actual
+            dynamically generated discovered-message list.
+            -->
+
+            <div class="collection-empty-state">
+
+                <span class="collection-empty-symbol">
+                    ♡
+                </span>
+
+                <p>
+                    Your discovered messages will appear here.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="scripts/site-config.js"></script>
+
+    <script src="scripts/shared.js"></script>
+
+</body>
+
+</html>

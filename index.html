@@ -4,66 +4,317 @@
 
 <head>
 
+    <!--
+    ====================================================
+    BASIC DOCUMENT INFORMATION
+    ====================================================
+    -->
+
     <meta charset="UTF-8">
 
+    <!--
+    Makes the page scale correctly on phones and tablets.
+    This line is essential for responsive mobile design.
+    -->
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>A Message For You</title>
+    <!--
+    JavaScript will later replace this with the title
+    stored in site-config.js.
+    -->
+    <title>Celebrating Forever</title>
 
+
+    <!--
+    Main stylesheet for the entire website.
+    -->
     <link
         rel="stylesheet"
-        href="style.css"
+        href="styles/styles.css"
     >
 
 </head>
 
 
-<body>
+<body class="home-page">
 
-    <main class="message-container">
 
-        <div class="message-number" id="messageNumber">
-            MESSAGE 01
-        </div>
+    <!--
+    ====================================================
+    MENU BUTTON
+    ====================================================
 
-        <h1 id="messageTitle">
-            Open when you need a reminder
-        </h1>
+    This button opens the slide-out navigation drawer.
+    -->
 
-        <p class="date" id="messageDate">
-            September 20, 2026
-        </p>
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navigationDrawer"
+    >
 
-        <div class="divider"></div>
+        <span class="menu-icon" aria-hidden="true">
 
-        <p class="intro" id="messageIntro">
-            I made this one just for you.
-        </p>
+            <span></span>
+            <span></span>
+            <span></span>
 
-        <audio
-            id="audioPlayer"
-            controls
+        </span>
+
+        <span class="menu-label">
+            Menu
+        </span>
+
+    </button>
+
+
+    <!--
+    ====================================================
+    DARK OVERLAY BEHIND OPEN MENU
+    ====================================================
+    -->
+
+    <div
+        class="navigation-overlay"
+        id="navigationOverlay"
+    ></div>
+
+
+    <!--
+    ====================================================
+    SLIDE-OUT NAVIGATION
+    ====================================================
+    -->
+
+    <nav
+        class="navigation-drawer"
+        id="navigationDrawer"
+        aria-label="Main navigation"
+    >
+
+        <button
+            class="navigation-close"
+            id="closeMenuButton"
+            type="button"
+            aria-label="Close navigation menu"
         >
-            <source
-                id="audioSource"
-                src="audio/test.m4a"
-                type="audio/mp4"
-            >
+            ×
+        </button>
 
-            Your browser does not support audio.
-        </audio>
 
-        <p class="footer">
-            Made for you ♡
+        <p class="navigation-eyebrow">
+            Celebrating Forever
         </p>
+
+
+        <a
+            class="navigation-link"
+            href="index.html"
+        >
+            Home
+        </a>
+
+
+        <a
+            class="navigation-link"
+            href="collection.html"
+        >
+            Messages I've Found
+        </a>
+
+
+        <!--
+        This link is useful while building the website.
+
+        It can disappear automatically when proposalMode
+        is eventually switched to true.
+        -->
+        <a
+            class="navigation-link"
+            href="message.html"
+            data-development-only
+        >
+            Message Template
+        </a>
+
+    </nav>
+
+
+    <!--
+    ====================================================
+    HOMEPAGE
+    ====================================================
+    -->
+
+    <main class="home-layout">
+
+
+        <!--
+        =================================================
+        LEFT SIDE / TOP ON MOBILE:
+        PHOTO AREA
+
+        We are intentionally using a placeholder for now.
+        Once you choose the photograph, we will replace
+        this without redesigning the page.
+        =================================================
+        -->
+
+        <section
+            class="home-photo-panel"
+            aria-label="Photo of the couple"
+        >
+
+            <div class="photo-placeholder">
+
+                <span>
+                    Your photo will go here
+                </span>
+
+            </div>
+
+
+            <!--
+            Temporary decorative light shapes.
+
+            These are NOT the final flowers.
+
+            They simply help us evaluate placement until
+            you approve actual watercolor artwork.
+            -->
+            <div
+                class="botanical-light botanical-light--one"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="botanical-light botanical-light--two"
+                aria-hidden="true"
+            ></div>
+
+        </section>
+
+
+        <!--
+        =================================================
+        RIGHT SIDE / BOTTOM ON MOBILE:
+        LOVE-LETTER CONTENT
+        =================================================
+        -->
+
+        <section class="home-letter-panel">
+
+
+            <div
+                class="letter-botanical-guide"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="home-letter-content">
+
+
+                <p class="home-eyebrow">
+                    A little place for us
+                </p>
+
+
+                <div class="couple-names">
+
+                    <span data-your-name>
+                        YourName
+                    </span>
+
+                    <span class="name-ampersand">
+                        &
+                    </span>
+
+                    <span data-partner-name>
+                        PartnersName
+                    </span>
+
+                </div>
+
+
+                <h1
+                    class="home-headline"
+                    data-home-headline
+                >
+                    Celebrating us
+                </h1>
+
+
+                <p
+                    class="home-subheadline"
+                    data-home-subheadline
+                >
+                    Today is our day.
+                </p>
+
+
+                <div
+                    class="letter-divider"
+                    aria-hidden="true"
+                >
+                    <span></span>
+                    <span>♡</span>
+                    <span></span>
+                </div>
+
+
+                <p
+                    class="home-letter"
+                    data-home-letter
+                >
+                    I wanted today to feel a little different.
+                </p>
+
+
+                <!--
+                This is a temporary development shortcut.
+
+                Later we can decide whether the first real
+                message should appear directly on the home
+                page.
+                -->
+
+                <a
+                    class="letter-link"
+                    href="message.html"
+                    data-development-only
+                >
+                    Preview the message design
+                    <span aria-hidden="true">→</span>
+                </a>
+
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <script src="script.js"></script>
+    <!--
+    ====================================================
+    JAVASCRIPT
+
+    IMPORTANT:
+    site-config.js must load BEFORE shared.js.
+
+    shared.js depends on values stored in SITE_CONFIG.
+    ====================================================
+    -->
+
+    <script src="scripts/site-config.js"></script>
+
+    <script src="scripts/shared.js"></script>
 
 </body>
 
