@@ -896,7 +896,126 @@ floral artwork could eventually interact with the image.
     background: #171413;
 
 }
+/*
+========================================================
+FINAL MESSAGE HOOK
+========================================================
 
+This is intentionally subtle for now.
+
+Checkpoint 5 will refine the final message visually.
+
+The class already exists so we will not need to change
+the JavaScript later.
+*/
+
+.message-card--final {
+
+    border-color:
+        rgba(182, 138, 62, 0.5);
+
+}
+
+/*
+========================================================
+MESSAGE ERROR STATE
+========================================================
+*/
+
+.message-error {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            100%,
+            520px
+        );
+
+    padding:
+        54px
+        34px;
+
+    text-align: center;
+
+    background:
+        var(--color-paper);
+
+    border-radius: 6px;
+
+    box-shadow:
+        var(--shadow-card);
+
+}
+
+
+.message-error-symbol {
+
+    margin:
+        0
+        0
+        16px;
+
+    font-size: 28px;
+
+    color: var(--color-aged-gold);
+
+}
+
+
+.message-error h1 {
+
+    margin:
+        0
+        0
+        18px;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            40px
+        );
+
+}
+
+
+.message-error > p:not(.message-error-symbol) {
+
+    margin:
+        0
+        auto;
+
+    max-width: 370px;
+
+    line-height: 1.65;
+
+    color: var(--color-muted-ink);
+
+}
+
+
+.message-error-link {
+
+    display: inline-block;
+
+    margin-top: 28px;
+
+    padding-bottom: 4px;
+
+    border-bottom:
+        1px solid
+        rgba(112, 43, 56, 0.4);
+
+    color: var(--color-oxblood);
+
+    text-decoration: none;
+
+}
 
 .message-environment {
 
@@ -981,6 +1100,126 @@ using an external image.
 
 }
 
+/*
+========================================================
+FINAL MESSAGE HOOK
+========================================================
+
+This is intentionally subtle for now.
+
+Checkpoint 5 will refine the final message visually.
+
+The class already exists so we will not need to change
+the JavaScript later.
+*/
+
+.message-card--final {
+
+    border-color:
+        rgba(182, 138, 62, 0.5);
+
+}
+
+/*
+========================================================
+MESSAGE ERROR STATE
+========================================================
+*/
+
+.message-error {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            100%,
+            520px
+        );
+
+    padding:
+        54px
+        34px;
+
+    text-align: center;
+
+    background:
+        var(--color-paper);
+
+    border-radius: 6px;
+
+    box-shadow:
+        var(--shadow-card);
+
+}
+
+
+.message-error-symbol {
+
+    margin:
+        0
+        0
+        16px;
+
+    font-size: 28px;
+
+    color: var(--color-aged-gold);
+
+}
+
+
+.message-error h1 {
+
+    margin:
+        0
+        0
+        18px;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            40px
+        );
+
+}
+
+
+.message-error > p:not(.message-error-symbol) {
+
+    margin:
+        0
+        auto;
+
+    max-width: 370px;
+
+    line-height: 1.65;
+
+    color: var(--color-muted-ink);
+
+}
+
+
+.message-error-link {
+
+    display: inline-block;
+
+    margin-top: 28px;
+
+    padding-bottom: 4px;
+
+    border-bottom:
+        1px solid
+        rgba(112, 43, 56, 0.4);
+
+    color: var(--color-oxblood);
+
+    text-decoration: none;
+
+}
 
 /*
 ========================================================
@@ -1260,6 +1499,49 @@ They are not the final watercolor florals.
 
 }
 
+/*
+========================================================
+OPTIONAL MESSAGE PHOTOGRAPH
+========================================================
+
+This area exists only when the selected message has an
+image path in messages.js.
+
+The [hidden] attribute prevents it from occupying space
+when no image exists.
+*/
+
+.message-photo-container {
+
+    margin:
+        0
+        0
+        30px;
+
+}
+
+
+.message-photo {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 340px;
+
+    object-fit: cover;
+
+    border:
+        1px solid
+        rgba(128, 97, 67, 0.2);
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(43, 33, 31, 0.12);
+
+}
 
 .message-audio {
 

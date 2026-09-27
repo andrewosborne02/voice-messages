@@ -4,6 +4,12 @@
 
 <head>
 
+    <!--
+    ====================================================
+    BASIC PAGE INFORMATION
+    ====================================================
+    -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -24,9 +30,11 @@
 <body class="message-page">
 
 
-    <!-- ==============================
-         MENU BUTTON
-    =============================== -->
+    <!--
+    ====================================================
+    MENU BUTTON
+    ====================================================
+    -->
 
     <button
         class="menu-button menu-button--dark"
@@ -52,19 +60,17 @@
     </button>
 
 
-    <!-- ==============================
-         NAVIGATION OVERLAY
-    =============================== -->
+    <!--
+    ====================================================
+    NAVIGATION
+    ====================================================
+    -->
 
     <div
         class="navigation-overlay"
         id="navigationOverlay"
     ></div>
 
-
-    <!-- ==============================
-         NAVIGATION DRAWER
-    =============================== -->
 
     <nav
         class="navigation-drawer"
@@ -105,7 +111,7 @@
 
         <a
             class="navigation-link"
-            href="message.html"
+            href="message.html?m=7KQ3A"
             data-development-only
         >
             Message Template
@@ -116,23 +122,14 @@
 
     <!--
     ====================================================
-    DARK ACADEMIA ENVIRONMENT
+    MESSAGE ENVIRONMENT
     ====================================================
-
-    This section fills the screen.
-
-    The illustrated objects and actual floral artwork will
-    be added later after you approve the assets.
     -->
 
     <main class="message-environment">
 
 
-        <!--
-        Temporary atmospheric shapes.
-        These will eventually be replaced or supplemented
-        by proper approved artwork.
-        -->
+        <!-- Temporary decorative background elements -->
 
         <div
             class="academic-shape academic-shape--left"
@@ -144,10 +141,6 @@
             aria-hidden="true"
         ></div>
 
-
-        <!--
-        Temporary floral positioning guides.
-        -->
 
         <div
             class="floral-haze floral-haze--top"
@@ -162,26 +155,39 @@
 
         <!--
         =================================================
-        STATIONERY MESSAGE CARD
+        NORMAL MESSAGE CONTENT
         =================================================
+
+        JavaScript will fill the blank elements below.
         -->
 
-        <article class="message-card">
+        <article
+            class="message-card"
+            id="messageCard"
+        >
 
 
-            <p class="message-number">
-                Message 01
+            <p
+                class="message-number"
+                id="messageNumber"
+            >
+                Message
             </p>
 
 
-            <h1 class="message-title">
-                Wake up message
+            <h1
+                class="message-title"
+                id="messageTitle"
+            >
+                Loading your message...
             </h1>
 
 
-            <p class="message-description">
-                I wanted my voice to be one of the first
-                things you heard today.
+            <p
+                class="message-description"
+                id="messageDescription"
+            >
+                Just a moment.
             </p>
 
 
@@ -192,20 +198,45 @@
 
 
             <!--
-            Standard HTML audio player FOR NOW.
+            OPTIONAL MESSAGE PHOTO
 
-            We will consider replacing this with a custom
-            player after the main website is complete.
+            JavaScript hides this entire container when
+            the message's image property is null.
+            -->
+
+            <figure
+                class="message-photo-container"
+                id="messagePhotoContainer"
+                hidden
+            >
+
+                <img
+                    class="message-photo"
+                    id="messagePhoto"
+                    src=""
+                    alt=""
+                >
+
+            </figure>
+
+
+            <!--
+            AUDIO PLAYER
+
+            JavaScript dynamically inserts the correct
+            audio filename into #messageAudioSource.
             -->
 
             <audio
                 class="message-audio"
+                id="messageAudio"
                 controls
                 preload="metadata"
             >
 
                 <source
-                    src="audio/test.m4a"
+                    id="messageAudioSource"
+                    src=""
                     type="audio/mp4"
                 >
 
@@ -213,13 +244,6 @@
 
             </audio>
 
-
-            <!--
-            The decorative earbuds will eventually occupy
-            this region.
-
-            For now this label marks their intended role.
-            -->
 
             <div
                 class="earbud-placeholder"
@@ -231,12 +255,77 @@
 
         </article>
 
+
+        <!--
+        =================================================
+        ERROR STATE
+        =================================================
+
+        This appears only if the URL contains an invalid
+        or missing message ID.
+
+        It starts hidden.
+        -->
+
+        <section
+            class="message-error"
+            id="messageError"
+            hidden
+        >
+
+            <p class="message-error-symbol">
+                ♡
+            </p>
+
+            <h1>
+                This note couldn't be found.
+            </h1>
+
+            <p>
+                Try opening the message again from the
+                link you were given.
+            </p>
+
+            <a
+                href="index.html"
+                class="message-error-link"
+            >
+                Return home
+            </a>
+
+        </section>
+
+
     </main>
 
 
+    <!--
+    ====================================================
+    JAVASCRIPT LOAD ORDER
+    ====================================================
+
+    1. site-config.js
+       Loads website-wide settings.
+
+    2. messages.js
+       Loads your voice-message database.
+
+    3. shared.js
+       Loads menu/global behavior.
+
+    4. message.js
+       Reads the URL and loads the correct message.
+
+    Order matters.
+    -->
+
     <script src="scripts/site-config.js"></script>
 
+    <script src="scripts/messages.js"></script>
+
     <script src="scripts/shared.js"></script>
+
+    <script src="scripts/message.js"></script>
 
 </body>
 
