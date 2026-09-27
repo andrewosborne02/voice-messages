@@ -114,62 +114,157 @@
          COLLECTION CONTENT
     =============================== -->
 
-    <main class="collection-layout">
+    <<!--
+========================================================
+COLLECTION CONTENT
+========================================================
+-->
+
+<main class="collection-layout">
 
 
-        <section class="collection-introduction">
+    <section class="collection-introduction">
 
 
-            <p class="collection-eyebrow">
-                A little archive
+        <p class="collection-eyebrow">
+            A little archive
+        </p>
+
+
+        <h1>
+            Messages I've Found
+        </h1>
+
+
+        <p>
+            Every note you've discovered has a place here.
+        </p>
+
+
+        <div
+            class="collection-divider"
+            aria-hidden="true"
+        ></div>
+
+
+        <!--
+        =================================================
+        DISCOVERED MESSAGE GRID
+
+        collection.js automatically inserts discovered
+        message cards into this container.
+        =================================================
+        -->
+
+        <div
+            class="message-collection-grid"
+            id="discoveredMessages"
+            aria-live="polite"
+        ></div>
+
+
+        <!--
+        =================================================
+        EMPTY STATE
+
+        This appears only when no valid messages have
+        been discovered on this browser yet.
+        =================================================
+        -->
+
+        <div
+            class="collection-empty-state"
+            id="collectionEmptyState"
+        >
+
+            <span class="collection-empty-symbol">
+                ♡
+            </span>
+
+            <p>
+                Your discovered messages will appear here.
+            </p>
+
+        </div>
+
+
+        <!--
+        =================================================
+        DEVELOPMENT TOOLS
+
+        shared.js hides this entire section automatically
+        whenever proposalMode becomes true.
+        =================================================
+        -->
+
+        <section
+            class="development-panel"
+            data-development-only
+        >
+
+
+            <p class="development-eyebrow">
+                Development only
             </p>
 
 
-            <h1>
-                Messages I've Found
-            </h1>
+            <h2>
+                All message links
+            </h2>
 
 
-            <p>
-                Every note you've discovered will have a
-                place here.
+            <p class="development-explanation">
+                Use these links while building the site.
+                Opening one also marks that message as
+                discovered on this browser.
             </p>
 
 
             <div
-                class="collection-divider"
-                aria-hidden="true"
+                class="development-message-list"
+                id="developmentMessageList"
             ></div>
 
 
-            <!--
-            This is temporary.
-
-            Checkpoint 3 will replace this with the actual
-            dynamically generated discovered-message list.
-            -->
-
-            <div class="collection-empty-state">
-
-                <span class="collection-empty-symbol">
-                    ♡
-                </span>
-
-                <p>
-                    Your discovered messages will appear here.
-                </p>
-
-            </div>
+            <button
+                class="development-reset-button"
+                id="resetDiscoveriesButton"
+                type="button"
+            >
+                Reset discovered messages
+            </button>
 
 
         </section>
 
-    </main>
 
+    </section>
 
-    <script src="scripts/site-config.js"></script>
+</main>
 
-    <script src="scripts/shared.js"></script>
+    <!--
+========================================================
+COLLECTION PAGE JAVASCRIPT
+========================================================
+
+Load order:
+
+1. Website settings
+2. Message database
+3. Browser storage tools
+4. Shared menu behavior
+5. Collection-specific behavior
+-->
+
+<script src="scripts/site-config.js"></script>
+
+<script src="scripts/messages.js"></script>
+
+<script src="scripts/storage.js"></script>
+
+<script src="scripts/shared.js"></script>
+
+<script src="scripts/collection.js"></script>
 
 </body>
 

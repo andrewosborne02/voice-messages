@@ -292,7 +292,26 @@ Otherwise:
     show the error state.
 */
 
+/*
+========================================================
+8. DISPLAY AND DISCOVER THE MESSAGE
+========================================================
+
+A valid message is considered "discovered" as soon as
+the page successfully opens.
+
+The person does NOT need to press Play first.
+
+This matches the NFC behavior we want:
+
+Tap tag -> page opens -> message becomes discovered.
+*/
+
 if (selectedMessage) {
+
+    window.MESSAGE_STORAGE.markMessageDiscovered(
+        selectedMessage.id
+    );
 
     displayMessage(selectedMessage);
 

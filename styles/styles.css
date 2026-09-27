@@ -150,7 +150,23 @@ a {
     color: inherit;
 
 }
+/*
+========================================================
+HIDDEN ELEMENT SAFETY RULE
+========================================================
 
+The HTML "hidden" attribute should always remove an
+element from the layout.
+
+!important prevents a component's normal display rule
+from accidentally overriding it.
+*/
+
+[hidden] {
+
+    display: none !important;
+
+}
 
 /*
 ========================================================
@@ -1756,6 +1772,295 @@ interact with the card.
 
 }
 
+/*
+========================================================
+DISCOVERED MESSAGE COLLECTION
+========================================================
+*/
+
+.message-collection-grid {
+
+    display: grid;
+
+    gap: 18px;
+
+    margin-top: 38px;
+
+    text-align: left;
+
+}
+
+
+.discovered-message-card {
+
+    position: relative;
+
+    padding:
+        28px
+        30px;
+
+    background:
+        rgba(255, 255, 255, 0.32);
+
+    border:
+        1px solid
+        rgba(128, 97, 67, 0.18);
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(43, 33, 31, 0.07);
+
+}
+
+
+.discovered-message-number {
+
+    margin:
+        0
+        0
+        10px;
+
+    font-family: var(--font-interface);
+
+    font-size: 9px;
+
+    letter-spacing: 0.23em;
+
+    text-transform: uppercase;
+
+    color: var(--color-muted-ink);
+
+}
+
+
+.discovered-message-title {
+
+    margin:
+        0
+        0
+        10px;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(
+            24px,
+            4vw,
+            32px
+        );
+
+    color: var(--color-plum);
+
+}
+
+
+.discovered-message-description {
+
+    margin:
+        0;
+
+    max-width: 580px;
+
+    line-height: 1.6;
+
+    color: #695850;
+
+}
+
+
+.discovered-message-link {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding-bottom: 3px;
+
+    border-bottom:
+        1px solid
+        rgba(112, 43, 56, 0.35);
+
+    font-family: var(--font-interface);
+
+    font-size: 11px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--color-oxblood);
+
+    text-decoration: none;
+
+}
+
+
+/*
+========================================================
+DEVELOPMENT MESSAGE PANEL
+========================================================
+
+This section exists for you, not your partner.
+*/
+
+.development-panel {
+
+    margin-top: 70px;
+
+    padding:
+        30px;
+
+    text-align: left;
+
+    border:
+        1px dashed
+        rgba(112, 43, 56, 0.3);
+
+    border-radius: 8px;
+
+    background:
+        rgba(112, 43, 56, 0.035);
+
+}
+
+
+.development-eyebrow {
+
+    margin:
+        0
+        0
+        8px;
+
+    font-family: var(--font-interface);
+
+    font-size: 9px;
+
+    letter-spacing: 0.23em;
+
+    text-transform: uppercase;
+
+    color: var(--color-oxblood);
+
+}
+
+
+.development-panel h2 {
+
+    margin:
+        0
+        0
+        10px;
+
+    font-weight: 400;
+
+    font-size: 28px;
+
+}
+
+
+.development-explanation {
+
+    margin:
+        0
+        0
+        24px;
+
+    line-height: 1.6;
+
+    color: var(--color-muted-ink);
+
+}
+
+
+.development-message-list {
+
+    display: grid;
+
+    gap: 8px;
+
+}
+
+
+.development-message-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        10px
+        0;
+
+    border-bottom:
+        1px solid
+        rgba(43, 33, 31, 0.09);
+
+}
+
+
+.development-message-row a {
+
+    color: var(--color-ink);
+
+    text-decoration: none;
+
+}
+
+
+.development-message-row a:hover {
+
+    color: var(--color-oxblood);
+
+}
+
+
+.development-message-row code {
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+
+    color: var(--color-muted-ink);
+
+}
+
+
+.development-reset-button {
+
+    margin-top: 28px;
+
+    padding:
+        11px
+        16px;
+
+    border:
+        1px solid
+        rgba(112, 43, 56, 0.35);
+
+    border-radius: 4px;
+
+    background:
+        transparent;
+
+    font-family: var(--font-interface);
+
+    font-size: 11px;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+
+    color: var(--color-oxblood);
+
+    cursor: pointer;
+
+}
 
 /*
 ========================================================
