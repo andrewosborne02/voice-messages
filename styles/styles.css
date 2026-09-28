@@ -107,16 +107,16 @@ scattered throughout the stylesheet.
 */
 
 --asset-home-floral-left:
-    none;
+    url("../images/decorative/homepage-left-bottom-floral-composition.png");
 
 --asset-home-floral-right:
-    none;
+    url("../images/decorative/homepage-upper-right-floral-composition.png");
 
 --asset-message-floral-top:
-    none;
+    url("../images/decorative/message-page-upper-floral-arrangement.png");
 
 --asset-message-floral-bottom:
-    none;
+    url("../images/decorative/message-page-lower-floral-arrangement.png");
 
 --asset-message-academia:
     none;
@@ -730,7 +730,7 @@ or WebP decorative layers.
 
 .home-floral-art--left {
 
-    left: -40px;
+    left: 20px;
     bottom: -30px;
 
     width:
