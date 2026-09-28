@@ -171,13 +171,34 @@
             aria-label="Photo of the couple"
         >
 
-            <div class="photo-placeholder">
+            <!--
+=====================================================
+HOMEPAGE PHOTOGRAPH
+=====================================================
 
-                <span>
-                    Your photo will go here
-                </span>
+home.js decides whether the real photograph or the
+placeholder should be visible.
+-->
 
-            </div>
+<img
+    class="home-photo"
+    id="homePhoto"
+    src=""
+    alt=""
+    hidden
+>
+
+
+<div
+    class="photo-placeholder"
+    id="homePhotoPlaceholder"
+>
+
+    <span>
+        Your photo will go here
+    </span>
+
+</div>
 
 
             <!--
@@ -295,7 +316,27 @@
 
 
             </div>
+<!--
+=====================================================
+FUTURE HOMEPAGE FLORAL ARTWORK
+=====================================================
 
+These elements currently contain no image.
+
+After you approve the floral artwork, CSS will place
+transparent watercolor botanical images here.
+-->
+
+<div
+    class="home-floral-art home-floral-art--left"
+    aria-hidden="true"
+></div>
+
+
+<div
+    class="home-floral-art home-floral-art--right"
+    aria-hidden="true"
+></div>
         </section>
 
     </main>
@@ -315,6 +356,8 @@
     <script src="scripts/site-config.js"></script>
 
     <script src="scripts/shared.js"></script>
+
+    <script src="scripts/home.js"></script>
 
 </body>
 

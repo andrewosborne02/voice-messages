@@ -63,6 +63,33 @@ window.SITE_CONFIG = {
         "completely ours.",
 
 
+/*
+----------------------------------------------------
+HOMEPAGE PHOTOGRAPH
+----------------------------------------------------
+
+Leave homePhoto as null until you select the actual photo.
+
+Later, if your photo is stored at:
+
+images/home/home-photo.jpg
+
+change:
+
+homePhoto: null
+
+to:
+
+homePhoto: "images/home/home-photo.jpg"
+
+You will not need to edit index.html.
+*/
+
+homePhoto: null,
+
+homePhotoAlt:
+    "A favorite photograph of us",
+
    /*
 ----------------------------------------------------
 SITE MODE

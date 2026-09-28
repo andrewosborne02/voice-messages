@@ -92,6 +92,37 @@ every element using var(--color-emerald) updates.
     --menu-layer: 1000;
     --drawer-layer: 1100;
 
+    /*
+---------------------------------
+DECORATIVE ARTWORK
+---------------------------------
+
+These remain "none" until you approve the actual
+generated artwork.
+
+Later we only need to replace "none" with url(...).
+
+This prevents decorative image filenames from being
+scattered throughout the stylesheet.
+*/
+
+--asset-home-floral-left:
+    none;
+
+--asset-home-floral-right:
+    none;
+
+--asset-message-floral-top:
+    none;
+
+--asset-message-floral-bottom:
+    none;
+
+--asset-message-academia:
+    none;
+
+--asset-message-earbuds:
+    none;
 }
 
 
@@ -514,6 +545,70 @@ Current navigation location.
 
 }
 
+/*
+========================================================
+REAL HOMEPAGE PHOTOGRAPH
+========================================================
+
+The photograph fills the entire photograph panel.
+
+object-fit: cover means:
+
+"Fill this box while preserving the photograph's
+original proportions. Crop excess image if necessary."
+*/
+
+.home-photo {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+    50% 50% means the photograph is centered.
+
+    Later we can alter this if the two of you are not
+    centered in the selected picture.
+    */
+    object-position:
+        50%
+        50%;
+
+}
+
+
+/*
+Adds a subtle darkening layer over the photograph.
+
+This prevents bright photographs from visually fighting
+with the cream love-letter panel.
+*/
+
+.home-photo-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(20, 17, 17, 0.24),
+            transparent 45%
+        );
+
+}
 
 .photo-placeholder {
 
@@ -571,7 +666,7 @@ Current navigation location.
 
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 
     padding:
         10px
@@ -600,47 +695,89 @@ Temporary lighting guides showing approximately where
 floral artwork could eventually interact with the image.
 */
 
-.botanical-light {
+
+
+/*
+========================================================
+HOMEPAGE FLORAL ARTWORK SLOTS
+========================================================
+
+These slots currently display nothing because the
+associated CSS variables are set to "none."
+
+Once artwork is approved, these become transparent PNG
+or WebP decorative layers.
+*/
+
+.home-floral-art {
 
     position: absolute;
 
-    border-radius: 50%;
-
-    filter:
-        blur(34px);
+    z-index: 3;
 
     pointer-events: none;
 
-}
+    background-repeat:
+        no-repeat;
 
+    background-size:
+        contain;
 
-.botanical-light--one {
-
-    width: 210px;
-    height: 210px;
-
-    right: -75px;
-    top: 14%;
-
-    background:
-        rgba(228, 197, 91, 0.18);
+    opacity: 0.95;
 
 }
 
 
-.botanical-light--two {
+.home-floral-art--left {
 
-    width: 180px;
-    height: 180px;
+    left: -40px;
+    bottom: -30px;
 
-    left: -60px;
-    bottom: 12%;
+    width:
+        min(
+            40vw,
+            390px
+        );
 
-    background:
-        rgba(217, 152, 168, 0.12);
+    height:
+        min(
+            62vh,
+            620px
+        );
+
+    background-image:
+        var(--asset-home-floral-left);
+
+    background-position:
+        left bottom;
 
 }
 
+
+.home-floral-art--right {
+
+    right: -55px;
+    top: -35px;
+
+    width:
+        min(
+            34vw,
+            340px
+        );
+
+    height:
+        min(
+            50vh,
+            500px
+        );
+
+    background-image:
+        var(--asset-home-floral-right);
+
+    background-position:
+        right top;
+
+}
 
 /*
 ========================================================
@@ -1112,6 +1249,38 @@ MESSAGE ERROR STATE
 Creates a very subtle old-paper / room texture without
 using an external image.
 */
+/*
+========================================================
+MESSAGE ENVIRONMENT VIGNETTE
+========================================================
+
+Darkens the outer edges of the screen slightly while
+leaving the center card brighter.
+
+This strengthens the visual hierarchy.
+*/
+
+.message-environment::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 34%,
+            rgba(8, 7, 7, 0.17) 72%,
+            rgba(8, 7, 7, 0.32) 100%
+        );
+
+}
 
 .message-environment::before {
 
@@ -1266,130 +1435,124 @@ MESSAGE ERROR STATE
 
 /*
 ========================================================
-9. TEMPORARY DARK-ACADEMIA SHAPES
+MESSAGE ILLUSTRATION LAYERS
 ========================================================
 
-These deliberately remain vague and de-emphasized.
+These layers sit behind the stationery message card.
 
-They are not intended to become recognizable final art.
+The center message card remains the visual focal point.
 */
 
-.academic-shape {
+
+/*
+---------------------------------
+DARK-ACADEMIA ILLUSTRATION
+---------------------------------
+*/
+
+.message-academia-art {
 
     position: absolute;
 
-    opacity: 0.15;
+    inset: 0;
 
-    filter:
-        blur(2px);
+    z-index: 0;
 
     pointer-events: none;
 
-}
+    background-image:
+        var(--asset-message-academia);
 
+    background-repeat:
+        no-repeat;
 
-.academic-shape--left {
+    background-position:
+        center;
 
-    width: 260px;
-    height: 430px;
+    background-size:
+        cover;
 
-    left: -80px;
-    bottom: -60px;
+    opacity: 0.24;
 
-    border-radius:
-        10px
-        80px
-        20px
-        10px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #1f120e,
-            #70472d
-        );
-
-    transform:
-        rotate(-8deg);
-
-}
-
-
-.academic-shape--right {
-
-    width: 190px;
-    height: 330px;
-
-    right: -40px;
-    top: 8%;
-
-    border-radius:
-        60px
-        10px
-        90px
-        20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #845d39,
-            #261812
-        );
-
-    transform:
-        rotate(7deg);
+    filter:
+        blur(0.8px);
 
 }
 
 
 /*
-========================================================
-10. TEMPORARY FLORAL HAZE
-========================================================
-
-These show composition only.
-
-They are not the final watercolor florals.
+---------------------------------
+FLORAL FRAME
+---------------------------------
 */
 
-.floral-haze {
+.message-floral-art {
 
     position: absolute;
 
-    border-radius: 50%;
-
-    filter:
-        blur(30px);
+    z-index: 1;
 
     pointer-events: none;
 
-}
+    background-repeat:
+        no-repeat;
 
+    background-size:
+        contain;
 
-.floral-haze--top {
-
-    width: 330px;
-    height: 190px;
-
-    top: -85px;
-    right: -35px;
-
-    background:
-        rgba(228, 197, 91, 0.17);
+    opacity: 0.92;
 
 }
 
 
-.floral-haze--bottom {
+.message-floral-art--top {
 
-    width: 350px;
-    height: 220px;
+    top: -30px;
+    right: -25px;
 
-    bottom: -110px;
-    left: -75px;
+    width:
+        min(
+            43vw,
+            470px
+        );
 
-    background:
-        rgba(217, 152, 168, 0.1);
+    height:
+        min(
+            46vh,
+            470px
+        );
+
+    background-image:
+        var(--asset-message-floral-top);
+
+    background-position:
+        right top;
+
+}
+
+
+.message-floral-art--bottom {
+
+    left: -35px;
+    bottom: -40px;
+
+    width:
+        min(
+            48vw,
+            520px
+        );
+
+    height:
+        min(
+            48vh,
+            500px
+        );
+
+    background-image:
+        var(--asset-message-floral-bottom);
+
+    background-position:
+        left bottom;
 
 }
 
@@ -1403,6 +1566,7 @@ They are not the final watercolor florals.
 .message-card {
 
     position: relative;
+    isolation: isolate;
 
     z-index: 2;
 
@@ -1435,13 +1599,44 @@ They are not the final watercolor florals.
         1px solid
         rgba(128, 97, 67, 0.24);
 
-    border-radius: 6px;
+    border-radius: 3px;
 
     box-shadow:
         var(--shadow-card);
 
 }
 
+/*
+A very subtle paper-fiber illusion.
+
+This is intentionally low-opacity so it reads as texture
+rather than as a visible pattern.
+*/
+
+.message-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background-image:
+
+        repeating-linear-gradient(
+            3deg,
+            transparent,
+            transparent 5px,
+            rgba(96, 72, 56, 0.035) 6px
+        );
+
+}
 
 .message-card::before {
 
@@ -1471,7 +1666,7 @@ They are not the final watercolor florals.
 
     font-size: 10px;
 
-    letter-spacing: 0.29em;
+    letter-spacing: 0.24em;
 
     text-transform: uppercase;
 
@@ -1501,6 +1696,7 @@ They are not the final watercolor florals.
     line-height: 1.08;
 
     color: var(--color-ink);
+    text-wrap: balance;
 
 }
 
@@ -1523,6 +1719,7 @@ They are not the final watercolor florals.
     line-height: 1.65;
 
     color: #695850;
+    font-style: italic;
 
 }
 
@@ -1596,30 +1793,49 @@ when no image exists.
 
 
 /*
-Temporary marker for where illustrated earbuds will later
-interact with the card.
+========================================================
+DECORATIVE WIRED EARBUD ARTWORK
+========================================================
+
+The element is positioned partly outside the stationery
+card so the earbuds can look as if they emerge from or
+rest against the note.
+
+The image itself is currently "none."
 */
 
-.earbud-placeholder {
+.message-earbud-art {
 
-    margin:
-        28px
-        auto
-        -20px;
+    position: absolute;
 
-    font-family: var(--font-interface);
+    right: -45px;
+    bottom: -55px;
 
-    font-size: 9px;
+    z-index: 4;
 
-    letter-spacing: 0.12em;
+    width:
+        min(
+            42vw,
+            260px
+        );
 
-    text-transform: uppercase;
+    height: 230px;
 
-    color:
-        rgba(120, 104, 96, 0.48);
+    pointer-events: none;
+
+    background-image:
+        var(--asset-message-earbuds);
+
+    background-repeat:
+        no-repeat;
+
+    background-size:
+        contain;
+
+    background-position:
+        right bottom;
 
 }
-
 
 /*
 ========================================================
@@ -2227,6 +2443,37 @@ LETTER
             24px;
 
     }
+
+    /*
+Reduce decorative artwork slightly on phones so it
+does not crowd the message card.
+*/
+
+.message-floral-art--top {
+
+    width: 62vw;
+    height: 38vh;
+
+}
+
+
+.message-floral-art--bottom {
+
+    width: 65vw;
+    height: 37vh;
+
+}
+
+
+.message-earbud-art {
+
+    right: -28px;
+    bottom: -48px;
+
+    width: 190px;
+    height: 180px;
+
+}
 
 }
 
