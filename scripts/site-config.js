@@ -63,20 +63,30 @@ window.SITE_CONFIG = {
         "completely ours.",
 
 
-    /*
-    ----------------------------------------------------
-    SITE MODE
-    ----------------------------------------------------
+   /*
+----------------------------------------------------
+SITE MODE
+----------------------------------------------------
 
-    false = DEVELOPMENT MODE
-    true  = PROPOSAL MODE
+THIS IS THE MASTER PROPOSAL-DAY SWITCH.
 
-    We are NOT fully using this feature yet.
+false
+=
+DEVELOPMENT MODE
 
-    Later this single setting will control whether
-    development-only navigation and features are visible.
-    */
+You can see testing tools, development links,
+and development indicators.
 
-    proposalMode: false
+true
+=
+PROPOSAL MODE
 
+Your partner sees only the real website experience.
+
+IMPORTANT:
+You should only need to change this ONE value when
+preparing the website for proposal day.
+*/
+
+proposalMode: false
 };

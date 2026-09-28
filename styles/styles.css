@@ -134,6 +134,22 @@ body {
 
 }
 
+/*
+========================================================
+MENU SCROLL LOCK
+========================================================
+
+shared.js adds the class "menu-open" to <body> while the
+navigation drawer is open.
+
+This stops the page underneath the drawer from scrolling.
+*/
+
+body.menu-open {
+
+    overflow: hidden;
+
+}
 
 button,
 input,
@@ -431,7 +447,18 @@ from accidentally overriding it.
 
 }
 
+/*
+Current navigation location.
+*/
 
+.navigation-link.is-current {
+
+    color:
+        var(--color-oxblood);
+
+    font-style: italic;
+
+}
 /*
 ========================================================
 5. HOMEPAGE
@@ -2059,6 +2086,57 @@ This section exists for you, not your partner.
     color: var(--color-oxblood);
 
     cursor: pointer;
+
+}
+
+
+/*
+========================================================
+DEVELOPMENT MODE INDICATOR
+========================================================
+
+This appears only when proposalMode is false.
+
+JavaScript creates the element automatically.
+*/
+
+.development-mode-indicator {
+
+    position: fixed;
+
+    right: 14px;
+    bottom: 14px;
+
+    z-index: 5000;
+
+    padding:
+        7px
+        10px;
+
+    border-radius: 4px;
+
+    background:
+        rgba(112, 43, 56, 0.92);
+
+    color:
+        #ffffff;
+
+    font-family:
+        var(--font-interface);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.18);
+
+    pointer-events: none;
 
 }
 
