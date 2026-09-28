@@ -119,7 +119,7 @@ scattered throughout the stylesheet.
     url("../images/decorative/message-page-lower-floral-arrangement.png");
 
 --asset-message-academia:
-    none;
+    url("../images/decorative/message-page-desk-background.png");
 
 --asset-message-earbuds:
     none;
@@ -730,12 +730,12 @@ or WebP decorative layers.
 
 .home-floral-art--left {
 
-    left: 20px;
+    left: -5px;
     bottom: -30px;
 
     width:
         min(
-            40vw,
+            25vw,
             390px
         );
 
@@ -756,12 +756,12 @@ or WebP decorative layers.
 
 .home-floral-art--right {
 
-    right: -55px;
-    top: -35px;
+    right: -7px;
+    top: -50px;
 
     width:
         min(
-            34vw,
+            50vw,
             340px
         );
 
@@ -1472,10 +1472,10 @@ DARK-ACADEMIA ILLUSTRATION
     background-size:
         cover;
 
-    opacity: 0.24;
+    opacity: 0.16;
 
     filter:
-        blur(0.8px);
+        blur(1.2px);
 
 }
 
@@ -1512,7 +1512,7 @@ FLORAL FRAME
 
     width:
         min(
-            43vw,
+            100vw,
             470px
         );
 
