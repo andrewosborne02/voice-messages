@@ -58,9 +58,9 @@ window.SITE_CONFIG = {
     homeSubheadline: "Today is our day.",
 
     homeLetter:
-        "I wanted today to feel a little different. " +
-        "A little slower, a little more intentional, and " +
-        "completely ours.",
+        "Today is the day we have been waiting years for. " +
+        "Enjoy the last couple hours of being my girlfriend. " +
+        "Get ready to be my fiancé! I love you!",
 
 
 /*
