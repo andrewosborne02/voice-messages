@@ -95,7 +95,7 @@ window.VOICE_MESSAGES = [
         audio:
             "audio/message-02.m4a",
 
-        image: "images/yellowroses.jpg",
+        image: "images/yellowroses.JPG",
 
         imagePosition:
             "50% 50%",
