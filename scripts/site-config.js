@@ -115,5 +115,5 @@ You should only need to change this ONE value when
 preparing the website for proposal day.
 */
 
-proposalMode: false
+proposalMode: true
 };
