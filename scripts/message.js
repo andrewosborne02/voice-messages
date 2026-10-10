@@ -199,6 +199,16 @@ function displayMessage(message) {
         messagePhoto.src =
             message.image;
 
+/*
+Use the individual image crop position stored in
+messages.js.
+
+If no custom position exists, default to the center.
+*/
+
+messagePhoto.style.objectPosition =
+    message.imagePosition || "50% 50%";
+
         messagePhoto.alt =
             `Photo accompanying ${message.publicTitle}`;
 

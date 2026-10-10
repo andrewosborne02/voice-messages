@@ -85,7 +85,7 @@ homePhoto: "images/home/home-photo.jpg"
 You will not need to edit index.html.
 */
 
-homePhoto: null,
+homePhoto: "images/home/homepage-couple-photo.jpg",
 
 homePhotoAlt:
     "A favorite photograph of us",

@@ -56,15 +56,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Wake up message",
 
-        publicTitle: "Wake up message",
+        publicTitle: "Good Morning, Beautiful",
 
         description:
-            "I wanted my voice to be one of the first things you heard today.",
+            "I wanted my voice to be one of the first things you heard today after such a crazy night.",
 
         audio:
             "audio/message-01.m4a",
 
-        image: null,
+        image: "images/gallerywall.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -84,15 +87,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Yellow roses message",
 
-        publicTitle: "Yellow roses message",
+        publicTitle: "Take a moment to breathe",
 
         description:
-            "A little note for the next part of your day.",
+            "A quiet reminder of my everlasting love for you.",
 
         audio:
             "audio/message-02.m4a",
 
-        image: null,
+        image: "images/yellowroses.jpg",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -112,15 +118,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Paper ring message",
 
-        publicTitle: "Paper ring message",
+        publicTitle: "I'd Marry you with paper rings",
 
         description:
-            "This one has a little story attached to it.",
+            "But I'm glad we have a shiny one.",
 
         audio:
             "audio/message-03.m4a",
 
-        image: null,
+        image: "images/6month.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -140,15 +149,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Outfit for the day",
 
-        publicTitle: "Outfit for the day",
+        publicTitle: "Get Ready for the Day",
 
         description:
-            "I have one more thing planned before you head out.",
+            "Stay cute and comfy for now.",
 
         audio:
             "audio/message-04.m4a",
 
-        image: null,
+        image: "images/vegas.JPEG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -168,15 +180,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Clue to find fort",
 
-        publicTitle: "Clue to find fort",
+        publicTitle: "A Little Whimsy to Start Your Morning",
 
         description:
-            "Your next stop starts with this message.",
+            "Just a space to vibe for the day.",
 
         audio:
             "audio/message-05.m4a",
 
-        image: null,
+        image: "images/outsidechair.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -196,15 +211,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Marble track",
 
-        publicTitle: "Marble track",
+        publicTitle: "Losing my Marbles",
 
         description:
-            "You found the next one.",
+            "It may not work completely, but I hope it makes you smile.",
 
         audio:
             "audio/message-06.m4a",
 
-        image: null,
+        image: "images/ruler.JPEG",
+
+        imagePosition:
+            "50% 30%",
 
         isFinal: false
     },
@@ -224,15 +242,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Jeopardy",
 
-        publicTitle: "Jeopardy",
+        publicTitle: "Grow Old With Me",
 
         description:
-            "A little something before the next part begins.",
+            "I want to age like fine wine with you.",
 
         audio:
             "audio/message-07.m4a",
 
-        image: null,
+        image: "images/graduation.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -252,15 +273,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Massage hint",
 
-        publicTitle: "Massage hint",
+        publicTitle: "Are You a Little Tense?",
 
         description:
-            "I think you've earned what comes next.",
+            "I think you have earned this one.",
 
         audio:
             "audio/message-08.m4a",
 
-        image: null,
+        image: "images/tiegrab.JPG",
+
+        imagePosition:
+            "50% 30%",
 
         isFinal: false
     },
@@ -280,15 +304,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Chic Fil A",
 
-        publicTitle: "Chic Fil A",
+        publicTitle: "Hope You're Hungry",
 
         description:
-            "Time for the next stop.",
+            "Hope it tastes as good as that first time",
 
         audio:
             "audio/message-09.m4a",
 
-        image: null,
+        image: "images/favorite.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -308,15 +335,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Yarn store",
 
-        publicTitle: "Yarn store",
+        publicTitle: "A Single Thread of Gold Tied Me To You",
 
         description:
-            "Another little piece of today's plan.",
+            "Can't wait to be tethered to you forever.",
 
         audio:
             "audio/message-10.m4a",
 
-        image: null,
+        image: "images/bolero.JPG",
+
+        imagePosition:
+            "50% 20%",
 
         isFinal: false
     },
@@ -336,15 +366,18 @@ window.VOICE_MESSAGES = [
 
         internalName: "Getting Ready Playlist",
 
-        publicTitle: "Getting Ready Playlist",
+        publicTitle: "Get Pretty For Me",
 
         description:
-            "This one is for while you're getting ready.",
+            "Hope you like the jams.",
 
         audio:
             "audio/message-11.m4a",
 
-        image: null,
+        image: "images/heelup.JPG",
+
+        imagePosition:
+            "50% 30%",
 
         isFinal: false
     },
@@ -353,26 +386,29 @@ window.VOICE_MESSAGES = [
     /*
     ====================================================
     MESSAGE 12
-    Journey to Graces
+    Rubix Cube
     ====================================================
     */
 
     {
-        id: "W2J7N",
+        id: "F6P3X",
 
         order: 12,
 
-        internalName: "Journey to Graces",
+        internalName: "Rubix Cube",
 
-        publicTitle: "Journey to Graces",
+        publicTitle: "One Last Puzzle",
 
         description:
-            "Your day isn't finished quite yet.",
+            "I love that beautiful brain of yours.",
 
         audio:
             "audio/message-12.m4a",
 
-        image: null,
+        image: "images/rubixcube.JPG",
+
+        imagePosition:
+            "50% 50%",
 
         isFinal: false
     },
@@ -381,62 +417,6 @@ window.VOICE_MESSAGES = [
     /*
     ====================================================
     MESSAGE 13
-    Rubix Cube
-    ====================================================
-    */
-
-    {
-        id: "F6P3X",
-
-        order: 13,
-
-        internalName: "Rubix Cube",
-
-        publicTitle: "Rubix Cube",
-
-        description:
-            "One more piece to figure out.",
-
-        audio:
-            "audio/message-13.m4a",
-
-        image: null,
-
-        isFinal: false
-    },
-
-
-    /*
-    ====================================================
-    MESSAGE 14
-    Park clue
-    ====================================================
-    */
-
-    {
-        id: "N8D1V",
-
-        order: 14,
-
-        internalName: "Park clue",
-
-        publicTitle: "Park clue",
-
-        description:
-            "Listen closely to this one.",
-
-        audio:
-            "audio/message-14.m4a",
-
-        image: null,
-
-        isFinal: false
-    },
-
-
-    /*
-    ====================================================
-    MESSAGE 15
     Final Message
     ====================================================
     */
@@ -444,19 +424,22 @@ window.VOICE_MESSAGES = [
     {
         id: "A4K9T",
 
-        order: 15,
+        order: 13,
 
         internalName: "Final Message",
 
-        publicTitle: "Final Message",
+        publicTitle: "You Are My Forever",
 
         description:
-            "I have one last thing I want to tell you.",
+            "I have one last thing I want to tell my girlfriend.",
 
         audio:
-            "audio/message-15.m4a",
+            "audio/message-13.m4a",
 
-        image: null,
+        image: "images/carrysabrina.JPG",
+
+        imagePosition:
+            "50% 30%",
 
         isFinal: true
     }
