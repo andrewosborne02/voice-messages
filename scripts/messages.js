@@ -64,7 +64,7 @@ window.VOICE_MESSAGES = [
         audio:
             "audio/message-01.m4a",
 
-        image: "images/gallerywall.jpg?v=2",
+        image: "images/gallerywall.jpg",
 
         imagePosition:
             "50% 50%",
@@ -95,7 +95,7 @@ window.VOICE_MESSAGES = [
         audio:
             "audio/message-02.m4a",
 
-        image: "images/yellowroses.JPG?v=2",
+        image: "images/yellowroses.jpg",
 
         imagePosition:
             "50% 50%",
