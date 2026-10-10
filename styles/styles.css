@@ -1472,7 +1472,7 @@ DARK-ACADEMIA ILLUSTRATION
     background-size:
         cover;
 
-    opacity: 0.16;
+    opacity: 0.36;
 
     filter:
         blur(1.2px);
@@ -1512,13 +1512,13 @@ FLORAL FRAME
 
     width:
         min(
-            100vw,
+            43vw,
             470px
         );
 
     height:
         min(
-            46vh,
+            vh,
             470px
         );
 
